@@ -12,7 +12,7 @@
             <img src="logo.png" alt="Logo">
         </div>
         <h2>SplitSmart</h2>
-        <form id="signupForm">
+        <form id="signupForm" action="/signup" method="POST">
             <div class="form-group">
                 <input type="text" id="fullName" name="fullName" placeholder="full name" required>
             </div>
@@ -26,6 +26,9 @@
                 <input type="text" id="vpa" name="vpa" placeholder="VPA" required>
             </div>
             <button type="submit">Sign Up</button>
+            <div>
+                <a href="/login">Already have an account?</a>
+            </div>
         </form>
     </div>
     <script src="signup.js"></script>
