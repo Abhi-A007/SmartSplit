@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fc;
+    color: #101c2a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh; /* Set minimum height to 100vh */
+    padding: 10px;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 400px; /* Suitable for mobile */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Flex layout for vertical alignment */
+    min-height: 100%; /* Ensure it fills the parent height */
+    overflow: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #101c2a;
+    color: white;
+    padding: 15px 20px;
+    border-bottom: 2px solid #0056b3;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.app-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-info {
+    font-size: 14px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 15px 20px;
+    background: #f3f6fc;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Flex-grow ensures that white space fills the area between the search bar and the groups list */
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Groups List */
+.groups-list {
+    flex-grow: 1; /* Ensures this block pushes to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Groups are aligned at the top of this section */
+    background: #ffffff;
+    padding: 10px 0;
+    overflow-y: auto; /* Allows scrolling if there are many groups */
+}
+
+.group-item {
+    display: block;
+    padding: 15px 20px;
+    background: #f9f9f9;
+    color: #101c2a;
+    text-decoration: none;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background 0.3s;
+}
+
+.group-item:hover {
+    background: #f0f0f0;
+}
+
+.group-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-info {
+        margin-top: 10px;
+    }
+
+    .app-name {
+        font-size: 16px;
+    }
+}
