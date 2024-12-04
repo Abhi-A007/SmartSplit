@@ -6,11 +6,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 10px; /* Add padding for better responsiveness */
 }
 
 .login-container {
     background-color: #101c2a;
-    width: 320px;
+    width: 100%; /* Use full width on smaller devices */
+    max-width: 320px; /* Limit maximum width for larger screens */
     padding: 20px;
     border-radius: 20px;
     text-align: center;
@@ -27,6 +29,7 @@ h2 {
     color: white;
     font-weight: 400;
     margin-bottom: 20px;
+    font-size: 1.5em; /* Adjust font size for smaller screens */
 }
 
 .form-group {
@@ -36,12 +39,13 @@ h2 {
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increase padding for better touch experience */
     border-radius: 20px;
     border: none;
     background: #1d2b3a;
     color: white;
     font-size: 14px;
+    box-sizing: border-box; /* Ensure consistent width and padding */
 }
 
 input::placeholder {
@@ -50,7 +54,7 @@ input::placeholder {
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Adjust padding for mobile */
     border: none;
     border-radius: 20px;
     background: linear-gradient(to right, #0056b3, #007bff);
@@ -77,4 +81,24 @@ button:hover {
 
 .signup-link a:hover {
     color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+        border-radius: 15px; /* Slightly smaller radius for compact design */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Adjust heading size for mobile */
+    }
+
+    button {
+        font-size: 14px; /* Scale button text for smaller screens */
+    }
+
+    .signup-link a {
+        font-size: 12px; /* Slightly reduce font size for the link */
+    }
 }
